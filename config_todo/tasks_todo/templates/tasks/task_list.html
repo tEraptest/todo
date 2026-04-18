@@ -1,0 +1,10 @@
+<h1>Мой ToDo список</h1>
+<ul>
+{% for task in tasks %}
+    <li>
+        {{ task.title }} {% if task.done %}(Выполнено){% endif %}
+    </li>
+{% empty %}
+    <li>Задач нет</li>
+{% endfor %}
+</ul>
